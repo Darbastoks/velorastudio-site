@@ -1,0 +1,50 @@
+/* Mobile sticky CTA kept as a lightweight conversion element */
+.mobile-sticky-cta{display:none;}
+@media (max-width: 860px){
+  body{padding-bottom:92px;}
+  .mobile-sticky-cta{
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:12px;
+    z-index:80;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:12px 12px 12px 16px;
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:22px;
+    background:rgba(2,4,10,.82);
+    backdrop-filter:blur(22px);
+    box-shadow:0 24px 80px rgba(0,0,0,.55),0 0 0 1px rgba(20,135,255,.12) inset;
+  }
+  .mobile-sticky-cta div{min-width:0;}
+  .mobile-sticky-cta strong,
+  .mobile-sticky-cta span{display:block;}
+  .mobile-sticky-cta strong{
+    font-size:14px;
+    letter-spacing:-.025em;
+    white-space:nowrap;
+  }
+  .mobile-sticky-cta span{
+    color:#9aa8bd;
+    font-size:12px;
+    margin-top:2px;
+  }
+  .mobile-sticky-cta a{
+    flex:0 0 auto;
+    border-radius:999px;
+    background:linear-gradient(135deg,#fff,#d8efff);
+    color:#02040a;
+    font-weight:850;
+    font-size:13px;
+    padding:12px 15px;
+  }
+  .footer{padding-bottom:118px;}
+}
+@media (max-width: 370px){
+  .mobile-sticky-cta{left:8px;right:8px;padding-left:12px;}
+  .mobile-sticky-cta span{font-size:11px;}
+  .mobile-sticky-cta a{padding:11px 12px;font-size:12px;}
+}
