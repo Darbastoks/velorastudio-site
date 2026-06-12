@@ -43,6 +43,7 @@ if (copyBtn && copyStatus) {
 
 const stickyCta = document.querySelector('.mobile-sticky-cta');
 const stickyClose = document.querySelector('.mobile-sticky-close');
+const stickyAction = document.querySelector('.mobile-sticky-action');
 if (stickyCta && stickyClose) {
   const wasClosed = sessionStorage.getItem('veloraStickyClosed') === '1';
   if (wasClosed) {
@@ -52,6 +53,11 @@ if (stickyCta && stickyClose) {
     stickyCta.classList.add('is-hidden');
     sessionStorage.setItem('veloraStickyClosed', '1');
   });
+  if (stickyAction) {
+    stickyAction.addEventListener('click', () => {
+      stickyCta.classList.add('is-hidden');
+    });
+  }
 }
 
 document.getElementById('year').textContent = new Date().getFullYear();
