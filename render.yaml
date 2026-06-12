@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: velorastudio
+    runtime: static
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
