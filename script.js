@@ -17,13 +17,13 @@ if (toggle && nav) {
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.textContent = open ? 'Close' : 'Menu';
+    toggle.textContent = open ? 'Uždaryti' : 'Meniu';
   });
   nav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
-      toggle.textContent = 'Menu';
+      toggle.textContent = 'Meniu';
     });
   });
 }
@@ -34,7 +34,7 @@ if (copyBtn && copyStatus) {
   copyBtn.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(email);
-      copyStatus.textContent = 'Email nukopijuotas.';
+      copyStatus.textContent = 'El. paštas nukopijuotas.';
     } catch (error) {
       copyStatus.textContent = email;
     }
