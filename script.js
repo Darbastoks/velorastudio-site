@@ -41,6 +41,19 @@ if (copyBtn && copyStatus) {
   });
 }
 
+const stickyCta = document.querySelector('.mobile-sticky-cta');
+const stickyClose = document.querySelector('.mobile-sticky-close');
+if (stickyCta && stickyClose) {
+  const wasClosed = sessionStorage.getItem('veloraStickyClosed') === '1';
+  if (wasClosed) {
+    stickyCta.classList.add('is-hidden');
+  }
+  stickyClose.addEventListener('click', () => {
+    stickyCta.classList.add('is-hidden');
+    sessionStorage.setItem('veloraStickyClosed', '1');
+  });
+}
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const glow = document.querySelector('.cursor-glow');
